@@ -18,7 +18,7 @@ export default class WeatherTable extends Component {
     componentWillUnmount() {
       WeatherStore.stopListening(this._onChange);
     }
-
+  
     _onChange() {
       this.setState({
         conditions: WeatherStore.getConditions()
